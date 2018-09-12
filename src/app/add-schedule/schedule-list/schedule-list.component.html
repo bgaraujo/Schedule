@@ -1,0 +1,8 @@
+<h1>
+  Lista com os eventos
+</h1>
+<ol>
+  <li *ngFor="let schedule of schedules | async">
+      <b>{{ schedule.date |  date: 'dd/MM/yyyy' }}</b> - {{ schedule.specialty  }} - {{schedule.enabled ? 'Ativo' : 'Aguardando...' }}
+  </li>
+</ol>

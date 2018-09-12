@@ -1,0 +1,21 @@
+  <h1>
+    Agendar hora
+  </h1>
+  <form #f="ngForm" (submit)="form_submit(f)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Data</label>
+      <input class="form-control" type="date" ngModel name="date">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text">Especialidade</label>
+        </div>
+        <select class="custom-select" name="specialty" ngModel>
+            <option *ngFor="let item of specialties" value="{{ item }}">{{ item }}</option>
+        </select>
+      </div>
+
+
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
+  </form>
